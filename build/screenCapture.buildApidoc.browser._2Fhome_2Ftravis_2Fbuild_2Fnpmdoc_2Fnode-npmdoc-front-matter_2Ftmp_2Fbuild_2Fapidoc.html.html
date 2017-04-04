@@ -1,0 +1,115 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/jxson/front-matter">front-matter (v2.1.2)</a>
+</h1>
+<h4>Extract YAML front matter from a string</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.front-matter">module front-matter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.front-matter.test">
+            function <span class="apidocSignatureSpan">front-matter.</span>test
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.front-matter" id="apidoc.module.front-matter">module front-matter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.front-matter.test" id="apidoc.element.front-matter.test">
+        function <span class="apidocSignatureSpan">front-matter.</span>test
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function test(string) {
+  string = string || ''
+
+  return regex.test(string)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Return a `content` object with two properties:
+
+* `content.attributes` contains the extracted yaml attributes in json form
+* `content.body` contains the string contents below the yaml separators
+* `content.frontmatter` contains the original yaml string contents
+
+# fm.<span class="apidocCodeKeywordSpan">test</span>(string)
+
+Check if a string contains a front matter header of "---" or "= yaml =". Primarily used internally but is useful
+ outside of the module.
+
+Returns `true` or `false`
+
+```javascript
+fm.test(string) #=&gt; true || false
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
