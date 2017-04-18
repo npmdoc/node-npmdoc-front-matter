@@ -1,9 +1,14 @@
-# api documentation for  [front-matter (v2.1.2)](https://github.com/jxson/front-matter)  [![npm package](https://img.shields.io/npm/v/npmdoc-front-matter.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-front-matter) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-front-matter.svg)](https://travis-ci.org/npmdoc/node-npmdoc-front-matter)
+# npmdoc-front-matter
+
+#### api documentation for  [front-matter (v2.1.2)](https://github.com/jxson/front-matter)  [![npm package](https://img.shields.io/npm/v/npmdoc-front-matter.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-front-matter) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-front-matter.svg)](https://travis-ci.org/npmdoc/node-npmdoc-front-matter)
+
 #### Extract YAML front matter from a string
 
-[![NPM](https://nodei.co/npm/front-matter.png?downloads=true)](https://www.npmjs.com/package/front-matter)
+[![NPM](https://nodei.co/npm/front-matter.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/front-matter)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-front-matter/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-front-matter_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-front-matter/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-front-matter/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-front-matter/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-front-matter/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-front-matter/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-front-matter/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +23,6 @@
 {
     "author": {
         "name": "Jason Campbell",
-        "email": "jason@js.la",
         "url": "http://twitter.com/jxson"
     },
     "bugs": {
@@ -27,32 +31,26 @@
     "contributors": [
         {
             "name": "Jason Campbell",
-            "email": "jason@js.la",
             "url": "http://twitter.com/jxson"
         },
         {
             "name": "Jordan Santell",
-            "email": "jsantell@gmail.com",
             "url": "https://github.com/jsantell"
         },
         {
             "name": "Kai Davenport",
-            "email": "kaiyadavenport@gmail.com",
             "url": "https://github.com/binocarlos"
         },
         {
             "name": "Jean-Philippe Monette",
-            "email": "contact@jpmonette.net",
             "url": "https://github.com/jpmonette"
         },
         {
             "name": "Marc-André Arseneault",
-            "email": "marc-andre@arsnl.ca",
             "url": "https://github.com/arsnl"
         },
         {
             "name": "Bret Comnes",
-            "email": "bcomnes@gmail.com",
             "url": "http://bret.io"
         }
     ],
@@ -85,13 +83,11 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "jxson",
-            "email": "jason@greatergood.cc"
+            "name": "jxson"
         }
     ],
     "name": "front-matter",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git://github.com/jxson/front-matter.git"
@@ -101,48 +97,6 @@
     },
     "version": "2.1.2"
 }
-```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module front-matter](#apidoc.module.front-matter)
-1.  [function <span class="apidocSignatureSpan">front-matter.</span>test (string)](#apidoc.element.front-matter.test)
-
-
-
-# <a name="apidoc.module.front-matter"></a>[module front-matter](#apidoc.module.front-matter)
-
-#### <a name="apidoc.element.front-matter.test"></a>[function <span class="apidocSignatureSpan">front-matter.</span>test (string)](#apidoc.element.front-matter.test)
-- description and source-code
-```javascript
-function test(string) {
-  string = string || ''
-
-  return regex.test(string)
-}
-```
-- example usage
-```shell
-...
-
-Return a 'content' object with two properties:
-
-* 'content.attributes' contains the extracted yaml attributes in json form
-* 'content.body' contains the string contents below the yaml separators
-* 'content.frontmatter' contains the original yaml string contents
-
-# fm.test(string)
-
-Check if a string contains a front matter header of "---" or "= yaml =". Primarily used internally but is useful outside of the
-module.
-
-Returns 'true' or 'false'
-
-'''javascript
-fm.test(string) #=> true || false
-...
 ```
 
 
