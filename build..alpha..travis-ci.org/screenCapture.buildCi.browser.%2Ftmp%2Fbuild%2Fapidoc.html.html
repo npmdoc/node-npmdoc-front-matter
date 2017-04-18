@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/jxson/front-matter"
-
-    >front-matter (v2.1.2)</a>
+    <a href="https://github.com/jxson/front-matter">front-matter (v2.1.2)</a>
 </h1>
 <h4>Extract YAML front matter from a string</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.front-matter">module front-matter</a><ol>
 
@@ -130,10 +123,10 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function extractor(string) {
-  string = string || &#x27;&#x27;
+  string = string || ''
 
   var lines = string.split(/(\r?\n)/)
-  if (lines[0] &#x26;&#x26; /= yaml =|---/.test(lines[0])) {
+  if (lines[0] &amp;&amp; /= yaml =|---/.test(lines[0])) {
     return parse(string)
   } else {
     return { attributes: {}, body: string }
@@ -152,7 +145,7 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function test(string) {
-  string = string || &#x27;&#x27;
+  string = string || ''
 
   return regex.test(string)
 }</pre></li>
@@ -166,13 +159,13 @@ Return a `content` object with two properties:
 
 # fm.<span class="apidocCodeKeywordSpan">test</span>(string)
 
-Check if a string contains a front matter header of &#x22;---&#x22; or &#x22;= yaml =&#x22;. Primarily used internally but is useful
+Check if a string contains a front matter header of "---" or "= yaml =". Primarily used internally but is useful
  outside of the module.
 
 Returns `true` or `false`
 
 ```javascript
-fm.test(string) #=&#x3e; true || false
+fm.test(string) #=&gt; true || false
 ...</pre></li>
     </ul>
 
@@ -206,7 +199,7 @@ fm.test(string) #=&#x3e; true || false
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">function test(string) {
-  string = string || &#x27;&#x27;
+  string = string || ''
 
   return regex.test(string)
 }</pre></li>
@@ -220,13 +213,13 @@ Return a `content` object with two properties:
 
 # fm.<span class="apidocCodeKeywordSpan">test</span>(string)
 
-Check if a string contains a front matter header of &#x22;---&#x22; or &#x22;= yaml =&#x22;. Primarily used internally but is useful
+Check if a string contains a front matter header of "---" or "= yaml =". Primarily used internally but is useful
  outside of the module.
 
 Returns `true` or `false`
 
 ```javascript
-fm.test(string) #=&#x3e; true || false
+fm.test(string) #=&gt; true || false
 ...</pre></li>
     </ul>
 
@@ -257,3 +250,4 @@ fm.test(string) #=&#x3e; true || false
     ]
 </div>
 </div>
+</body></html>
