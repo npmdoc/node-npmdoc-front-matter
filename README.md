@@ -1,6 +1,6 @@
 # npmdoc-front-matter
 
-#### api documentation for  [front-matter (v2.1.2)](https://github.com/jxson/front-matter)  [![npm package](https://img.shields.io/npm/v/npmdoc-front-matter.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-front-matter) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-front-matter.svg)](https://travis-ci.org/npmdoc/node-npmdoc-front-matter)
+#### basic api documentation for  [front-matter (v2.1.2)](https://github.com/jxson/front-matter)  [![npm package](https://img.shields.io/npm/v/npmdoc-front-matter.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-front-matter) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-front-matter.svg)](https://travis-ci.org/npmdoc/node-npmdoc-front-matter)
 
 #### Extract YAML front matter from a string
 
@@ -95,7 +95,8 @@
     "scripts": {
         "test": "make test"
     },
-    "version": "2.1.2"
+    "version": "2.1.2",
+    "bin": {}
 }
 ```
 
