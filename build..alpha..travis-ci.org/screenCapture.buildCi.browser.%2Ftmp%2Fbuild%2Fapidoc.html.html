@@ -72,41 +72,6 @@
 
         </li>
 
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.front-matter.toString">
-            function <span class="apidocSignatureSpan">front-matter.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.front-matter.test">module front-matter.test</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.front-matter.test.test">
-            function <span class="apidocSignatureSpan">front-matter.</span>test
-            <span class="apidocSignatureSpan">(string)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.front-matter.toString">module front-matter.toString</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.front-matter.toString.toString">
-            function <span class="apidocSignatureSpan">front-matter.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
     </ol></li>
 
 </ol></div>
@@ -150,95 +115,22 @@
   return regex.test(string)
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
+module.exports = extractor
+module.exports.test = test
 
-Return a `content` object with two properties:
-
-* `content.attributes` contains the extracted yaml attributes in json form
-* `content.body` contains the string contents below the yaml separators
-* `content.frontmatter` contains the original yaml string contents
-
-# fm.<span class="apidocCodeKeywordSpan">test</span>(string)
-
-Check if a string contains a front matter header of "---" or "= yaml =". Primarily used internally but is useful
- outside of the module.
-
-Returns `true` or `false`
-
-```javascript
-fm.test(string) #=&gt; true || false
-...</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.front-matter.toString" id="apidoc.element.front-matter.toString">
-        function <span class="apidocSignatureSpan">front-matter.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return text;
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.front-matter.test" id="apidoc.module.front-matter.test">module front-matter.test</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.front-matter.test.test" id="apidoc.element.front-matter.test.test">
-        function <span class="apidocSignatureSpan">front-matter.</span>test
-        <span class="apidocSignatureSpan">(string)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function test(string) {
+function extractor (string) {
   string = string || ''
 
-  return regex.test(string)
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
+  var lines = string.split(/(\r?\n)/)
+  if (lines[0] &amp;&amp; /= yaml =|---/.<span class="apidocCodeKeywordSpan">test</span>(lines[0])) {
+    return parse(string)
+  } else {
+    return { attributes: {}, body: string }
+  }
+}
 
-Return a `content` object with two properties:
-
-* `content.attributes` contains the extracted yaml attributes in json form
-* `content.body` contains the string contents below the yaml separators
-* `content.frontmatter` contains the original yaml string contents
-
-# fm.<span class="apidocCodeKeywordSpan">test</span>(string)
-
-Check if a string contains a front matter header of "---" or "= yaml =". Primarily used internally but is useful
- outside of the module.
-
-Returns `true` or `false`
-
-```javascript
-fm.test(string) #=&gt; true || false
+function parse (string) {
 ...</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.front-matter.toString" id="apidoc.module.front-matter.toString">module front-matter.toString</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.front-matter.toString.toString" id="apidoc.element.front-matter.toString.toString">
-        function <span class="apidocSignatureSpan">front-matter.</span>toString
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
